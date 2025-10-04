@@ -1,0 +1,306 @@
+/* Patients Module Styles */
+
+/* Base Container */
+.patients-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #f8fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Section Header */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-controls {
+    display: flex;
+    gap: 12px;
+}
+
+/* Dual Panel Layout */
+.patients-dual-panel {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    padding: 16px;
+    gap: 16px;
+    height: calc(100vh - 180px);
+}
+
+/* Left Panel - Form */
+.patients-left-panel {
+    flex: 1;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.panel-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.panel-header h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Form Styles */
+.patients-form {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.form-section {
+    margin-bottom: 24px;
+}
+
+.section-title-tiny {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #475569;
+}
+
+.form-input {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.form-input::placeholder {
+    color: #94a3b8;
+}
+
+/* Right Panel - Patients List */
+.patients-right-panel {
+    width: 45%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.panel-search {
+    padding: 12px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px 12px 8px 36px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E") no-repeat 12px center;
+    background-size: 16px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+/* Patients Table */
+.patients-list-container {
+    flex: 1;
+    overflow-y: auto;
+    position: relative;
+}
+
+.patients-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8125rem;
+}
+
+.patients-list-table th,
+.patients-list-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.patients-list-table th {
+    font-weight: 600;
+    color: #475569;
+    background-color: #f8fafc;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.patients-list-table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.patients-list-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.patients-list-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: all 0.2s;
+    gap: 6px;
+    border: 1px solid transparent;
+}
+
+.primary-btn {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #2563eb;
+}
+
+.secondary-btn {
+    background-color: #fff;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+
+.secondary-btn:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 20px;
+    border-top: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+}
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    color: #64748b;
+}
+
+.empty-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    opacity: 0.6;
+}
+
+.empty-state h4 {
+    margin: 0 0 8px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.empty-state p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .patients-dual-panel {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .patients-right-panel {
+        width: 100%;
+        margin-top: 16px;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
